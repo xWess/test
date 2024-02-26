@@ -1,0 +1,15 @@
+name: Set up Visual Studio 2019 for Windows
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows-2019
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Visual Studio 2019 for Windows
+      if: matrix.os == 'windows-2019'
+      uses: microsoft/setup-msbuild@v1.1
