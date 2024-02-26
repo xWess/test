@@ -1,5 +1,5 @@
-    - name: Install PyMuPDF on Windows
-      if: matrix.os == 'windows-2019'
+name: Install PyMuPDF on Windows
+if: matrix.os == 'windows-2019'
       run: |
         [bool] $vsSetupExists = $null -ne (Get-Command Get-VSSetupInstance -ErrorAction SilentlyContinue)
         if (!$vsSetupExists)
